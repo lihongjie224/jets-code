@@ -8,6 +8,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   build:
@@ -41,5 +43,5 @@ jobs:
         bucket: jets-key
         dist: dist
       env:
-        UPTOC_UPLOADER_AK: ${{ secrets.UPTOC_UPLOADER_KEYID }}
-        UPTOC_UPLOADER_SK: ${{ secrets.UPTOC_UPLOADER_KEYSECRET }}
+        UPTOC_UPLOADER_AK: ${{ secrets.UPTOC_UPLOADER_AK }}
+        UPTOC_UPLOADER_SK: ${{ secrets.UPTOC_UPLOADER_SK }}
