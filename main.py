@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-import requests, datetime
+import requests, datetime, os
 
 from bs4 import BeautifulSoup
 
@@ -12,7 +12,8 @@ with open('EZLTU34E0K - for 2018.1 or later.txt', 'r') as fs:
     updateText = soup.find_all('div')[2].text
     activeKey = fs.readlines()
 
-    with open('index.html', 'w+', encoding="utf-8") as ws:
+    os.mkdir("dist")
+    with open('dist/index.html', 'w+', encoding="utf-8") as ws:
 
         html = """
         <html>
