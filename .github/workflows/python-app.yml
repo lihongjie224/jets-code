@@ -35,6 +35,9 @@ jobs:
     - name: Run Application
       run: |
         python main.py
+    - name: Preview index.html
+      run: |
+        cat dist/index.html
     - name: Deploy
       uses: saltbo/uptoc@master
       with:
