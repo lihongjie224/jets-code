@@ -10,7 +10,7 @@ with open('EZLTU34E0K - for 2018.1 or later.txt', 'r') as fs:
     soup = BeautifulSoup(res.text,features="html.parser")
 
     updateText = soup.find_all('div')[2].text
-    activeKey = fs.readlines()
+    activeKey = fs.readlines()[0]
 
     os.mkdir("dist")
     with open('dist/index.html', 'w+', encoding="utf-8") as ws:
