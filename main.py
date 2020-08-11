@@ -26,9 +26,11 @@ with open('EZLTU34E0K - for 2018.1 or later.txt', 'r') as fs:
             <body>
                 <textarea id="key" style="margin: 0px; width: 1102px; height: 526px;">{}</textarea>
                 <div id="updateText">{}</div>
-                <div>编译时间：{}</div>
+                <div>编译时间：{}{}</div>
             </body>
         </html>
         """
 
-        ws.writelines(html.format(activeKey, updateText, datetime.datetime.now()))
+        print(datetime.datetime.now())
+
+        ws.writelines(html.format(activeKey, updateText, datetime.datetime.now(), "ok"))
