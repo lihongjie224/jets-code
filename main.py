@@ -12,7 +12,7 @@ with open("jihuoma/" + files[1], 'r') as fs:
     soup = BeautifulSoup(res.text,features="html.parser")
 
     updateText = soup.find_all('div')[2].text
-    activeKey = fs.readlines()
+    activeKey = fs.readlines()[0]
 
     os.mkdir("dist")
 
