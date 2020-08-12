@@ -3,7 +3,9 @@ import requests, datetime, os
 
 from bs4 import BeautifulSoup
 
-with open('EZLTU34E0K - for 2018.1 or later.txt', 'r') as fs:
+files = os.listdir("jihuoma/")
+
+with open("jihuoma/" + files[1], 'r') as fs:
     res = requests.get("http://idea.medeming.com/jets/")
     res.encoding = 'utf-8'
 
@@ -13,6 +15,7 @@ with open('EZLTU34E0K - for 2018.1 or later.txt', 'r') as fs:
     activeKey = fs.readlines()
 
     os.mkdir("dist")
+
     with open('dist/index.html', 'w+', encoding="utf-8") as ws:
 
         html = """

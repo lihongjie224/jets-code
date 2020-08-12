@@ -27,7 +27,7 @@ jobs:
         curl -o jihuoma.zip http://idea.medeming.com/jets/images/jihuoma.zip
     - name: Unzip
       run: |
-        unzip jihuoma.zip
+        unzip -d jihuoma/ jihuoma.zip
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
