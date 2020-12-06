@@ -5,7 +5,11 @@ from bs4 import BeautifulSoup
 
 files = os.listdir("jihuoma/")
 
-with open("jihuoma/" + files[1], 'rb') as fs:
+def findFile(filename):
+    return not filename.find('2018')
+
+
+with open("jihuoma/" + list(filter(findFile, files))[0], 'r') as fs:
     res = requests.get("http://idea.medeming.com/jets/")
     res.encoding = 'utf-8'
 
