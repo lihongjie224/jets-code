@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 files = os.listdir("jihuoma/")
 
-with open("jihuoma/" + files[1], 'r') as fs:
+with open("jihuoma/" + files[1], 'rb') as fs:
     res = requests.get("http://idea.medeming.com/jets/")
     res.encoding = 'utf-8'
 
