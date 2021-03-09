@@ -15,7 +15,7 @@ with open("jihuoma/" + list(filter(findFile, files))[0], 'r') as fs:
 
     soup = BeautifulSoup(res.text,features="html.parser")
 
-    updateText = soup.find_all('div')[2].text
+    updateText = soup.find_all('div')[1].text
     activeKey = fs.readlines()[0]
 
     os.mkdir("dist")
