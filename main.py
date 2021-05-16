@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 files = os.listdir("jihuoma/")
 
 def findFile(filename):
-    return not filename.find('2018.2')
+    return filename.find('2018.2')
 
 
 with open("jihuoma/" + list(filter(findFile, files))[0], 'r') as fs:
