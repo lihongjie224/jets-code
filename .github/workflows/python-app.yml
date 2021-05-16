@@ -24,7 +24,7 @@ jobs:
         python-version: 3.8
     - name: Download keys
       run: |
-        curl -o jihuoma.zip http://idea.medeming.com/jets/images/jihuoma.zip
+        curl -o jihuoma.zip http://idea.medeming.com/a/jihuoma.zip
     - name: Unzip
       run: |
         unzip -d jihuoma/ jihuoma.zip
